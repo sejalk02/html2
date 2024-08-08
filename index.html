@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #a2e718ca;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    background-color: #f6f5f7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.counter-value {
+    font-size: 24px;
+    margin: 0 20px;
+}
+
+    </style>
+</head>
+<body>
+    <body>
+        <div class="container">
+            <button id="decrement" class="button">-</button>
+            <span id="Value" class="counter-value">0</span>
+            <button id="increment" class="button">+</button>
+        </div>
+
+
+
+        <script>
+            const increment = document.getElementById('increment');
+const decrement = document.getElementById('decrement');
+const Value = document.getElementById('Value');
+
+let count = 0;
+
+increment.addEventListener('click', () => {
+    count++;
+    Value.textContent = count;
+});
+
+decrement.addEventListener('click', () => {
+    count--;
+    Value.textContent = count;
+});
+
+        </script>
+</body>
+</html>
